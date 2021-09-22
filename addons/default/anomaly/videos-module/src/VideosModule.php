@@ -40,6 +40,7 @@ class VideosModule extends Module
                 'new_category',
             ],
         ],
+
     ];
 
 }

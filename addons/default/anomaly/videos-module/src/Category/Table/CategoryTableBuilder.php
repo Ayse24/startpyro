@@ -17,14 +17,23 @@ class CategoryTableBuilder extends TableBuilder
      *
      * @var array|string
      */
-    protected $filters = [];
+    protected $filters = [
+        'search'=>[
+            'fields'=>[
+               'name'
+            ]
+        ]
+    ];
 
     /**
      * The table columns.
      *
      * @var array|string
      */
-    protected $columns = [];
+    protected $columns = [
+        'title',
+        'description',
+    ];
 
     /**
      * The table buttons.

@@ -41,6 +41,9 @@ class AnomalyModuleVideosCreateCategoriesStream extends Migration
         'slug' => [
             'unique' => true,
             'required' => true,
+            'config'=>[
+                'slugify' => 'name',
+            ]
         ],
 
         'description' => [
