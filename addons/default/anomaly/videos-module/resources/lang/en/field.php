@@ -35,5 +35,9 @@ return [
         'name'=>'Category',
     ],
 
+    'url'=>[
+        'name'=>'URL',
+    ],
+
 
 ];
