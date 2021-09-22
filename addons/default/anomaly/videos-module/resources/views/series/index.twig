@@ -1,0 +1,18 @@
+{% extends "theme::layouts/default" %}
+
+
+{% block content %}
+
+    {% set series= entries('videos','series').orderBy('slug','ASC').paginate() %}
+
+    <ul>
+        {% for series in series %}
+            <li>
+               {{ html_link(series.route('view'),series.title) }}
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    {{ series.render|raw }}
+{% endblock %}

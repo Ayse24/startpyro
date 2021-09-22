@@ -52,6 +52,28 @@ class VideosModuleServiceProvider extends AddonServiceProvider
      * @type array|null
      */
     protected $routes = [
+
+        'videos'           => [
+            'as'=>'anomaly.module.videos::videos.index',
+            'uses'=>'Anomaly\VideosModule\Http\Controller\VideosController@index',
+        ],
+
+        'videos/watch/{slug}'=>[
+           'as'=>'anomaly.module.videos::videos.view',
+            'uses'=>'Anomaly\VideosModule\Http\Controller\VideosController@view',
+        ],
+
+        'videos/series'           => [
+          'as'=>'anomaly.module.videos::series.index',
+        'uses'=>'Anomaly\VideosModule\Http\Controller\SeriesController@index',
+        ],
+
+        'videos/series/{slug}'=>[
+            'as'=>'anomaly.module.videos::series.view',
+            'uses'=>'Anomaly\VideosModule\Http\Controller\SeriesController@view',
+        ],
+
+
         'admin/videos/categories'           => 'Anomaly\VideosModule\Http\Controller\Admin\CategoriesController@index',
         'admin/videos/categories/create'    => 'Anomaly\VideosModule\Http\Controller\Admin\CategoriesController@create',
         'admin/videos/categories/edit/{id}' => 'Anomaly\VideosModule\Http\Controller\Admin\CategoriesController@edit',

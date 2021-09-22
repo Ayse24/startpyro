@@ -1,0 +1,18 @@
+{% extends "theme::layouts/default" %}
+
+
+{% block content %}
+
+    {% set videos= entries('videos').orderBy('slug','ASC').paginate() %}
+
+    <ul>
+        {% for video in videos %}
+        <li>
+            {{ html_link(video.series.route('view'),video.series.title) }}:{{ html_link(video.route('view'),video.title) }}
+        </li>
+
+        {% endfor %}
+    </ul>
+
+   {{ video.render|raw }}
+{% endblock %}

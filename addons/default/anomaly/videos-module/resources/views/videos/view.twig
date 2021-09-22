@@ -1,0 +1,7 @@
+{% extends "theme::layouts/default" %}
+
+{% block content %}
+<h3>{{ video.title }}</h3>
+    <small>{{ video.description }}</small>
+  {{ video.video.fluid|raw }}
+{% endblock %}

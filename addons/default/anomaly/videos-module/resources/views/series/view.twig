@@ -1,0 +1,21 @@
+{% extends "theme::layouts/default" %}
+
+{% block content %}
+    <h3>{{ series.title }}</h3>
+    <small>{{ series.description }}</small>
+
+
+
+    {% set videos= series.videos().paginate() %}
+
+    <ul>
+        {% for video in videos %}
+            <li>
+               {{ html_link(video.route('view'),video.title) }}
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    {{ series.fluid|raw }}
+{% endblock %}
