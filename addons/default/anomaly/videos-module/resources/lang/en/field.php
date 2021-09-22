@@ -25,5 +25,15 @@ return [
         'name'=>'Description',
     ],
 
+    'video'=>[
+        'name'=>'Video',
+    ],
+    'series'=>[
+        'name'=>'Serie',
+    ],
+    'categories'=>[
+        'name'=>'Category',
+    ],
+
 
 ];

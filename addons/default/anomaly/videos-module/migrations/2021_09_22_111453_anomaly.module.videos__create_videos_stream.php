@@ -39,6 +39,9 @@ class AnomalyModuleVideosCreateVideosStream extends Migration
             'translatable' => true,
             'required' => true,
         ],
+        'video' => [
+            'required' => true,
+        ],
         'slug' => [
             'unique' => true,
             'required' => true,
@@ -48,6 +51,10 @@ class AnomalyModuleVideosCreateVideosStream extends Migration
             'translatable' => true,
             'required' => true,
         ],
+        'series'=>[
+            'required' => true,
+        ],
+        'categories',
     ];
 
 }

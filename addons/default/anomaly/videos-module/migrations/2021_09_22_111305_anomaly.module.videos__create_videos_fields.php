@@ -13,6 +13,7 @@ class AnomalyModuleVideosCreateVideosFields extends Migration
     protected $fields = [
         'title' => 'anomaly.field_type.text',
         'name' => 'anomaly.field_type.text',
+        'video' => 'anomaly.field_type.video',
         'description' => 'anomaly.field_type.textarea',
         'slug' => [
             'type' => 'anomaly.field_type.slug',
